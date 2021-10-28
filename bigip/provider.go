@@ -134,6 +134,8 @@ func Provider() terraform.ResourceProvider {
 			"bigip_ipsec_policy":                    resourceBigipIpsecPolicy(),
 			"bigip_net_tunnel":                      resourceBigipNetTunnel(),
 			"bigip_net_ike_peer":                    resourceBigipNetIkePeer(),
+			"bigip_gtm_pool":                        resourceBigipGtmPool(),
+			"bigip_gtm_server":                      resourceBigipGtmServer(),
 		},
 	}
 	p.ConfigureFunc = func(d *schema.ResourceData) (interface{}, error) {
